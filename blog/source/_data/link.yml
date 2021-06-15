@@ -1,0 +1,23 @@
+- class_name: 友情链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网誌框架
+
+- class_name: 工具
+  class_desc: 好的工具值得分享
+  link_list:
+    - name: IDEA 激活码下载
+      link: http://idea.medeming.com/jets/
+      avatar: https://i.loli.net/2021/05/22/weMo9QgpuvWLfHy.png
+      descr: IDEA激活码
+    - name: free-V2ray
+      link: https://github.com/loouo/free
+      avatar: https://i.loli.net/2021/05/22/cJktT2mNHnCBMLV.jpg
+      descr: 免费的V2ray
+    - name: tool
+      link: https://tool.lu/
+      avatar: https://i.loli.net/2021/05/22/Mk9xUWXAuS8cNrE.jpg
+      descr: 程序员的工具箱
