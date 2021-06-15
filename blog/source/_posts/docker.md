@@ -25,6 +25,7 @@ date: 2019-07-05 14:41:09
   uname -r
 ```
 
+
 ### 更新版本：
 ```shell
   yum update
