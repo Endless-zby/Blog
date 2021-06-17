@@ -1,22 +1,22 @@
 ---
-title: 自建SS服务教程
+title: 搭建自己的ssr
 date: 2019-10-12 12:05:16
 updated: 2021-05-16 01:50:56
-description: 部署自己的ssr
+description: 相比市场上较高投入的虚拟专用网络，只是单纯的用于工作的话，不妨自己试着搭建一套ssr
 tags: 
-    - 工具 
+ - 工具 
 # 置顶优先级 数值越大优先级越高 #
 sticky: 100001
 # 【可选】文章分类 #
 categories: 工具
 # 【可选】文章关键字 #
 keywords: 
-    - ssr
-    - vps
-    - vultr
+ - ssr
+ - vps
+ - vultr
 ---
 
-> 声明：本教程只是服务于用于学习研究的技术爱好者，反对一切危害国家利益和人民美好生活的行为
+> 富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善
 
 
 *   第一步：**购买VPS服务器**
@@ -34,11 +34,11 @@ VPS服务器需要选择国外的，首选当然是 [vultr](https://my.vultr.com
 ### 创建
 下面我们来看如何创建自己的VPS服务器
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn1.png)
+![](https://i.loli.net/2021/06/17/7c8fxQMpDCOgrHU.png)
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn2.png)
+![](https://i.loli.net/2021/06/17/6k4rUWMloIGabZF.png)
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn3.png)
+![](https://i.loli.net/2021/06/17/9Iixu1sW2EyHtqe.png)
 
 联通的网络的话选择美国西雅图的节点会快点，延迟在 __60~75__ 之间，也比较稳定  
 
@@ -46,11 +46,11 @@ VPS服务器需要选择国外的，首选当然是 [vultr](https://my.vultr.com
 
 日本虽然距离近但是所有的节点得绕美国，还是直接选美国吧
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn4.png)
+![](https://i.loli.net/2021/06/17/eiIRfGTS79obnLZ.png)
 
 最好选择**contos7**
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn5.png)
+![](https://i.loli.net/2021/06/17/bz3MSkxA9l2BVXa.png)
 
 这些用不着，不用填
 
@@ -58,23 +58,23 @@ VPS服务器需要选择国外的，首选当然是 [vultr](https://my.vultr.com
 
 启动完成后可以在控制台看到已经有一台机器在运行了
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn6-1024x556.png)
+![](https://i.loli.net/2021/06/17/5BHOiqWeDI2dona.png)
 
 点进去可以看到当前运行服务的主要信息
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn7-1024x556.png)
+![](https://i.loli.net/2021/06/17/SMWo85gcXlqLm7N.png)
 
 使用 __xshell__ 来连接这台服务器
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn8.png)
+![](https://i.loli.net/2021/06/17/QKCBtLq19iueHmN.png)
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn9.png)
+![](https://i.loli.net/2021/06/17/Pk9V6ftBa8LoCyY.png)
 
 填写完成后点击连接即可
 ### 注意
 如果遇到无法连接话，很大概率是被墙了，那就需要更换ip，按照刚才创建服务器步骤再来一遍，选择其他节点（需要注意的是，在创建新的服务器之前，不要销毁刚才的服务器，因为如果先销毁再创建，得到的ip还是原来的那个，所以选择先创建再销毁）
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn10-1024x619.png)
+![](https://i.loli.net/2021/06/17/w3cxisvWa6OrUCV.png)
 
 连接成功
 
@@ -116,17 +116,17 @@ chmod +x shadowsocksR.sh
 ./shadowsocksR.sh 2>&1  tee shadowsocksR.log
 ```
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn11-1024x559.png)
+![](https://i.loli.net/2021/06/17/eGaopXjPQYqW5s2.png)
 
 设置连接密码
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn12-1024x559.png)
+![](https://i.loli.net/2021/06/17/5dvhciXru362xHf.png)
 
 设置访问端口
 
 回车开始安装
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn13-1024x559.jpg)
+![](https://i.loli.net/2021/06/17/fy8N6GhnoCgRbsL.jpg)
 
 安装完成  
 上面的信息保存好
@@ -141,7 +141,7 @@ chmod +x shadowsocksR.sh
 wget --no-check-certificate -O rskernel.sh https://raw.githubusercontent.com/hombo125/doubi/master/rskernel.sh && bash rskernel.sh
 ```
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn14-1.png)
+![](https://i.loli.net/2021/06/17/itm8rnQqTBNwYds.png)
 
 内核更新完成后，系统重启，一分钟后重新连接xshell
 
@@ -151,12 +151,12 @@ wget --no-check-certificate -O rskernel.sh https://raw.githubusercontent.com/hom
 yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh && bash appex.sh install
 ```
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn15-1024x559.png)
+![](https://i.loli.net/2021/06/17/p1dWxCGojPsFeaE.png)
 
 系统会自动安装锐速，同时会先后要求我们设置锐速的三项信息  
 按照图上的设置就行了
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn16.png)
+![](https://i.loli.net/2021/06/17/TymzP6cZnxq19ga.png)
 
 看到serverSpeeder is running那就证明成功了  
 
@@ -172,7 +172,7 @@ yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.
 
 ## Windows连接示例
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/vpn19-1-1024x556.png)
+![](https://i.loli.net/2021/06/17/WDYN8jQ3g7oxhX9.png)
 
 无压力播放1080p视频
 
