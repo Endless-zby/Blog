@@ -4,6 +4,8 @@ updated: 2021-06-14 00:24:14
 description: uTools是一个极简、插件化、跨平台的现代桌面软件。通过自由选配丰富的插件，打造你得心应手的工具集合。
 tags:
 - 工具
+
+cover: https://i.loli.net/2021/06/19/5CjGLD2JS9azI8g.png
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9971
 # 【可选】文章分类 #
@@ -20,7 +22,8 @@ date: 2020-07-13 18:38:52
 > uTools是一个极简、插件化、跨平台的现代桌面软件。通过自由选配丰富的插件，打造你得心应手的工具集合。  
 > 当你熟悉它后，能够为你节约大量时间，让你可以更加专注地改变世界。  
 ---
-> [开始使用](http://www.u.tools/)
+{% btn 'http://www.u.tools/',开始使用,far fa-hand-point-right,green larger %}
+
 ---
 ###   EveryThing本地索引（ms级搜索）
 

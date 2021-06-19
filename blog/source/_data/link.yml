@@ -24,4 +24,12 @@
     - name: butterfly.js
       link: https://butterfly.js.org/
       avatar: https://i.loli.net/2021/06/17/fEDm1nkyQwzHlvZ.png
-      descr: butterfly主题
+      descr: butterfly主题介绍
+    - name: fontawesome
+      link: https://fontawesome.com/icons?from=io
+      avatar: https://i.loli.net/2021/06/19/wqvizxL5mI6gHQn.jpg
+      descr: icon库
+    - name: pixabay
+      link: https://pixabay.com/zh/photos/
+      avatar: https://i.loli.net/2021/06/19/VoEH58z3epL9O4D.jpg
+      descr: 高清图片素材库

@@ -1,52 +1,57 @@
 ---
 title: 快递鸟API
-tags: []
-id: '1239'
-categories:
-  - - 小玩意
-  - - 工具
+updated: 2021-06-19 21:16:33
+description: 自己整一个查快递的小玩意
+tags:
+- Java
+cover: https://i.loli.net/2021/06/19/7hmAqYdXv6xPlDj.jpg
+# 置顶优先级 数值越大优先级越高 #
+sticky: 9980
+# 【可选】文章分类 #
+categories: Java
+# 【可选】文章关键字 #
+keywords:
+- 快递
 date: 2019-09-26 10:13:27
 ---
 
 #### api申请
 
-地址： [http://www.kdniao.com/](http://www.kdniao.com/)
+{% btn 'http://www.kdniao.com/',去官网申请开发者api,far fa-hand-point-right,green larger %}
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi1-1024x262.png)
 
-免费版提供的业务有如下：
+![](https://i.loli.net/2021/06/19/QwpHA9L2Nefbv1t.png)
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi2-1024x599.png)
+> `免费版`提供的业务有如下：
 
-这里我只以物流跟踪和单号识别来举例子（这两个最基础最常用）
+![](https://i.loli.net/2021/06/19/WZfKsRJnG95PV21.png)
+
+> 这里我只以`物流跟踪`和`单号识别`来举例子（这两个最基础最常用）
 
 #### API规范
 
-以物流跟踪为例：
+> 以`物流跟踪`为例：
 
 请求：
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi4-1024x331.png)
+![](https://i.loli.net/2021/06/19/lKNLkc9CpuA3f61.png)
 
-需要注意的是DataSign参数的编码！
+__需要注意的是DataSign参数的编码！__
 
-接口需要指定快递单号的快递公司编码，格式不对或则编码错误都会返失败的信息。 参照如下表！
+>接口需要指定快递单号的快递公司编码，格式不对或则编码错误都会返失败的信息。 参照如下表！
 
-[2019快递鸟接口支持快递公司编码](https://www.zby123.club/wp-content/uploads/2019/09/2019快递鸟接口支持快递公司编码.xlsx)[下载](https://www.zby123.club/wp-content/uploads/2019/09/2019快递鸟接口支持快递公司编码.xlsx)
+{% btn 'http://www.kdniao.com/file/%E5%BF%AB%E9%80%92%E9%B8%9F%E6%8E%A5%E5%8F%A3%E6%94%AF%E6%8C%81%E5%BF%AB%E9%80%92%E5%85%AC%E5%8F%B8%E7%BC%96%E7%A0%81.xlsx',查看快递公司编码,far fa-hand-point-right,blue larger %}
 
-yml配置：
+- yml配置：
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/MPM8A_8P4LIKU_GBVHBDI6.png)
+![](https://i.loli.net/2021/06/19/VL6FZkUwvPBeuqf.png)
 
-Entity：
+- Entity：
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi6-1024x629.png)
+![](https://i.loli.net/2021/06/19/Ppwsr4aquG3AbTh.png)
 
-使用@Configuration注解读取yml，注入
 
-本地使用Swagger2来测试，直接上代码
-
-```
+```java
 package club.zby.express.Controller;
 
 import club.zby.express.Config.Result;
@@ -124,14 +129,14 @@ public class ExpressController {
 }
 ```
 
-测试：
+- 测试结果：
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi7-1024x556.png)
+![](https://i.loli.net/2021/06/19/kQH3olnzDZ6vaEy.png)
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi8-1024x556.png)
+![](https://i.loli.net/2021/06/19/zTUgxv9bh8iLka3.png)
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi9-1024x245.png)
+![](https://i.loli.net/2021/06/19/S4LPhnZw6bQJ29T.png)
 
-对返回结果进行格式化
+- 对返回结果进行格式化
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/kuaidi10-1024x466.png)
+![](https://i.loli.net/2021/06/19/YHUlxmu63c4PFvX.png)

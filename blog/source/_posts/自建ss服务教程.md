@@ -2,6 +2,8 @@
 title: 搭建自己的ssr
 date: 2019-10-12 12:05:16
 updated: 2021-05-16 01:50:56
+top_img: https://i.loli.net/2021/06/19/EBn5ciPYWOzIaNq.jpg
+cover: https://i.loli.net/2021/06/19/By7GVLIvDwfepKb.jpg
 description: 相比市场上较高投入的虚拟专用网络，只是单纯的用于工作的话，不妨自己试着搭建一套ssr
 tags: 
  - 工具 

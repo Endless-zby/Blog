@@ -7,6 +7,7 @@ tags:
     - SpringBoot
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9990
+cover: https://i.loli.net/2021/06/19/UWHoY7tp2Nd3qwf.jpg
 # 【可选】文章分类 #
 categories: 工具
 # 【可选】文章关键字 #
