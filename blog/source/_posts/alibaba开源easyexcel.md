@@ -17,9 +17,21 @@ keywords:
 
 > EasyExcel是一个基于Java的简单、省内存的读写Excel的开源项目。在尽可能节约内存的情况下支持读写百M的Excel。
 
- * [官方github地址](https://github.com/alibaba/easyexcel)
+{% tabs windows %}
+<!-- tab 官方github地址@fab fa-github-->
 
- * [个人Demo地址](https://github.com/Endless-zby/EasyExcel-Demo) (新加入web中的读和写功能，集成swagger，默认地址 [http://127.0.0.1:8081/swagger-ui.html](http://127.0.0.1:8081/swagger-ui.html) )
+{% btn 'https://github.com/alibaba/easyexcel',官方github地址,far fa-hand-point-right,green larger %}
+
+<!-- endtab -->
+
+<!-- tab 个人Demo地址@fab fa-github -->
+
+{% btn 'https://github.com/Endless-zby/EasyExcel-Demo',个人Demo地址,far fa-hand-point-right,green larger %}
+- (新加入web中的读和写功能，集成swagger，默认地址 [http://127.0.0.1:8081/swagger-ui.html](http://127.0.0.1:8081/swagger-ui.html) )
+
+<!-- endtab -->
+{% endtabs %}
+
 
 # EasyExcel解决了什么
 
@@ -27,9 +39,9 @@ keywords:
 
 ![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel-1024x600.png)
 
-这是我项目中使用到的 poi 做Excel的解析，就这一堆看着难受不难受
+- 这是我项目中使用到的 poi 做Excel的解析，就这一堆看着难受不难受
 
-可以看出直接使用poi的结果就是繁琐，代码看着也不舒服，最为致命的是很容易造成OOM，内存占用是poi永远不可避免的话题，虽然EasyExcel底层还是使用poi，但是做了很多的优化，尤其解决了并发处理中的bug（说这么多干嘛！其实我只需要代码看着简洁易懂）
+- 可以看出直接使用poi的结果就是繁琐，代码看着也不舒服，最为致命的是很容易造成OOM，内存占用是poi永远不可避免的话题，虽然EasyExcel底层还是使用poi，但是做了很多的优化，尤其解决了并发处理中的bug（说这么多干嘛！其实我只需要代码看着简洁易懂）
 
 # SpringBoot
 
@@ -44,7 +56,7 @@ keywords:
         </dependency>
 ```
 
-我使用的最新2.2.2版本，对比csdn等博客中记录的1.0之后的版本来说，这个版本已经进行了很多次的迭代，修复了许多bug，而2.2.1是最近的一个正式版。
+- 我使用的最新2.2.2版本，对比csdn等博客中记录的1.0之后的版本来说，这个版本已经进行了很多次的迭代，修复了许多bug，而2.2.1是最近的一个正式版。
 # 能干什么
 ## 三大功能（读、写、填充）
 
@@ -54,7 +66,7 @@ keywords:
 
 ![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel1.png)
 
-以下Demo都以这个Excel为例子
+- 以下Demo都以这个Excel为例子
 
 *   创建实体类 （代码）
 
