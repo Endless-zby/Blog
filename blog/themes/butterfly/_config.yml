@@ -86,7 +86,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /img/icon.png
 
 # Avatar (头像)
 avatar:
@@ -260,7 +260,7 @@ addThis:
 # https://github.com/overtrue/share.js
 sharejs:
   enable: true
-  sites: facebook,twitter,wechat,weibo,qq
+  sites: wechat,weibo,qq,email,copy_link
 
 # AddToAny
 # https://www.addtoany.com/
@@ -432,7 +432,7 @@ footer:
 
 # Baidu Analytics
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: 543e5c55e1911bc531eeaae51aacee1b
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
@@ -477,8 +477,8 @@ google_adsense:
 site_verification:
   # - name: google_site_verification
   #   content: xxxxxx
-  # - name: baidu_site_verification
-  #   content: xxxxxxx
+   - name: baidu_site_verification
+     content: EVFimJNJoN2vJjJd
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
