@@ -1,41 +1,50 @@
 ---
-title: Android跨平台投屏（ScreenToGif）
+title: Android跨平台投屏（scrcpy）
 date: 2019-08-06 12:56:32
 updated: 2021-05-23 00:24:14
-description: 推荐一款开源投屏录屏工具
+description: 推荐两款开源投屏、录屏工具
 tags:
     - 工具
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9970
+
+top_img: https://i.loli.net/2021/06/25/86oeKms2rq3CH1n.png
+cover: https://i.loli.net/2021/06/25/86oeKms2rq3CH1n.png
 # 【可选】文章分类 #
 categories: 工具
 # 【可选】文章关键字 #
 keywords:
     - 投屏
+    - scrcpy
+    - 录屏
     - ScreenToGif
 ---
----
-## 官网
-[官网](https://www.screentogif.com/)
 
-## 项目
-[项目](https://github.com/NickeManarin/ScreenToGif)
+{% note success no-icon %}
+推荐两款开源`投屏工具`和`录屏工具`
+{% endnote %}
 
+{% tabs windows %}
+<!-- tab Scrcpy跨设备投屏 -->
 
-在众多的投屏工具中这是我觉得最好用的一款，响应速度快，功能齐全，没有广告
+## GitHub项目Release
+{% btn 'https://github.com/Genymobile/scrcpy/releases',GitHub项目Release,far fa-hand-point-right,orange larger %}
 
 ## 安装环境
 
 ### 下载ADB
-需要配置ADB调试环境
+需要配置`ADB`调试环境
 
-[ADB下载](https://pan.baidu.com/s/1bT9HzANDPVR3l3eVy6ZYuw)
+{% btn 'https://pan.baidu.com/s/1bT9HzANDPVR3l3eVy6ZYuw',ADB下载,far fa-hand-point-right,green larger %}
 
+{% note info no-icon %}
 解压密码：`123`
+{% endnote %}
+
 
 ### 配置环境变量
 
-### 开发者模式下连接至电脑
+#### 开发者模式下连接至电脑
 
 以下是一些参数配置，需要自定义的话可以看看
 
@@ -103,4 +112,39 @@ scrcpy --help
  ```shell
  scrcpy -v
  ```
+
+
+
+
+<!-- endtab -->
+
+<!-- tab ScreenToGif录屏工具 -->
+
+## ScreenToGif官网
+{% btn 'https://www.screentogif.com/',ScreenToGif官网,far fa-hand-point-right,green larger %}
+
+## GitHub项目
+{% btn 'https://github.com/NickeManarin/ScreenToGif',GitHub项目,far fa-hand-point-right,orange larger %}
+
+## 如何使用
+
+{% btn 'https://www.screentogif.com/features',去了解ScreenToGif,far fa-hand-point-right,blue larger %}
+
+
+{% note success no-icon %}
+在众多的屏幕录制工具中这是我觉得最好用的一款，{% label 免费 pink %}，{% label 简约 blue %}，{% label 录制编辑 orange %}，{% label 没有广告 green %}
+{% endnote %}
+
+
+<!-- endtab -->
+
+{% endtabs %}
+
+
+
+
+
+
+
+
  

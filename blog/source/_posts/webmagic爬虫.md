@@ -8,6 +8,8 @@ tags:
 sticky: 9968
 # 【可选】文章分类 #
 categories: 工具
+cover: https://i.loli.net/2021/06/25/8DFmGbtRJqUzsLK.jpg
+top_img: https://i.loli.net/2021/06/25/8DFmGbtRJqUzsLK.jpg
 # 【可选】文章关键字 #
 keywords:
 - Java
