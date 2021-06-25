@@ -6,6 +6,8 @@ tags:
 - Java
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9905
+cover: https://i.loli.net/2021/06/25/gpQBb6ETlZxPtdj.jpg
+top_img: https://i.loli.net/2021/06/25/DSKwZHctTpUaLm5.png
 # 【可选】文章分类 #
 categories: Java
 # 【可选】文章关键字 #

@@ -3,7 +3,8 @@ title: Java实体映射工具-MapStruct 的坑
 updated: 2021-06-13 00:24:14
 description: Java实体映射工具-MapStruct 的坑
 tags:
-- Java
+- Java 
+cover: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9969
 # 【可选】文章分类 #

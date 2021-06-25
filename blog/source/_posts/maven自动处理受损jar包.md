@@ -8,6 +8,8 @@ tags:
 sticky: 9909
 # 【可选】文章分类 #
 categories: maven
+cover: https://i.loli.net/2021/06/25/eBtHPNM1Z4vTwbn.jpg
+top_img: https://i.loli.net/2021/06/25/du6ekAfIZ4jvYRB.jpg
 # 【可选】文章关键字 #
 keywords:
 - maven

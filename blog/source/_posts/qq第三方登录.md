@@ -1,62 +1,71 @@
 ---
 title: QQ第三方登录
-tags: []
-id: '1230'
-categories:
-  - - 小玩意
-  - - 工具
+updated: 2021-06-25 00:24:14
+description: QQ第三方登录
+tags:
+- Java
+# 置顶优先级 数值越大优先级越高 #
+sticky: 9830
+cover: https://i.loli.net/2021/06/25/u1vyJeXt3niHL2B.jpg
+top_img: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
+# 【可选】文章分类 #
+categories: mysql
+# 【可选】文章关键字 #
+keywords:
+- qq
+- 登录
 date: 2019-09-26 09:45:57
 ---
 
-*   QQ互联平台上申请对接（根据自己开发选择应用环境）
+### QQ互联平台上申请对接（根据自己开发选择应用环境）
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/qqhulian--1024x529.png)
+![](https://i.loli.net/2021/06/25/uAkai9pBgbxWYTL.png)
+> 申请过程中审核时间比较长
 
-申请过程中审核时间比较长
+![](https://i.loli.net/2021/06/25/jyKlGvbaZUJns9r.png)
+![](https://i.loli.net/2021/06/25/qtEKfg6rXJH7yue.png)
+>`回调地址`可以理解为提供给腾讯一个你的服务地址，让腾讯调用并返回你需要的内容  
+>回调地址`不能`是本地地址，所以我这里使用了`内网穿透`方便在本地测试
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/qqhulian-1-1024x233.png)
+### 稍微看一下接口调用的注意点
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/qqhulian-2-1024x607.png)
+>对于应用而言，使用qq的注册信息只需要`两步`
+>
+>1、获取Authorization Code；  
+>2、通过Authorization Code获取Access Token
 
-回调地址可以理解为提供给腾讯一个你的服务地址，让腾讯调用并返回你需要的内容  
-回调地址不能是本地地址，所以我这里使用了内网穿透方便在本地测试
-
-*   稍微看一下接口调用的注意点
-
-对于应用而言，使用qq的注册信息只需要两步
-
-1、获取Authorization Code；  
-2、通过Authorization Code获取Access Token
-
-先看一下第一步 获取Authorization Code
+#### 第一步：获取Authorization Code
 
 **请求地址**：  
 PC网站：https://graph.qq.com/oauth2.0/authorize  
 **请求方法**：  
 GET  
-**请求参数**：![](http://www.zby123.club/wp-content/uploads/2019/09/qqhulian-3.png)
+**请求参数**：![](https://i.loli.net/2021/06/25/UNHqu6CAZyPI4nj.png)
 
 **返回：**
 
-如果用户成功登录并授权，则会跳转到指定的回调地址，并在redirect\_uri地址后带上Authorization Code和原始的state值。如：
+{% note warning simple %}
+如果用户成功登录并授权，则会跳转到指定的回调地址，并在redirect_uri地址后带上Authorization Code和原始的state值。`如：`
 
-PC网站：http://graph.qq.com/demo/index.jsp?code=9A5F\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*06AF&state=test
+PC网站：http://graph.qq.com/demo/index.jsp?code=9A5F*********************06AF&state=test
+{% endnote %}
 
-第二步，通过Authorization Code获取Access Token
+
+#### 第二步：通过Authorization Code获取Access Token
 
 **请求地址**：  
 PC网站：https://graph.qq.com/oauth2.0/token  
 **请求方法**：  
 GET  
-**请求参数**： ![](http://www.zby123.club/wp-content/uploads/2019/09/qqhulian-4.png)
+**请求参数**： ![](https://i.loli.net/2021/06/25/B2rdjtI5gUDJpcK.png)
 
 **返回：**
 
-![](https://www.zby123.club/wp-content/uploads/2019/09/qqhulian-5.png)
+![](https://i.loli.net/2021/06/25/ugR1drbY4PzecIh.png)
 
-*   直接上代码吧
+### 直接上代码吧
 
-```
+``` java
 package club.zby.newplan.service;
 
 import club.zby.newplan.Entity.Constants;

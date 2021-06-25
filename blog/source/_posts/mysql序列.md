@@ -6,6 +6,8 @@ tags:
 - mysql
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9901
+cover: https://i.loli.net/2021/06/25/MUH2qtVngR47pou.jpg
+top_img: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
 # 【可选】文章分类 #
 categories: mysql
 # 【可选】文章关键字 #

@@ -4,6 +4,7 @@ updated: 2021-05-23 00:24:14
 description: ab是apache自带的压力测试工具。ab非常实用，它不仅可以对apache服务器进行网站访问压力测试，也可以对或其它类型的服务器进行压力测
 tags:
 - Java
+cover: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9960
 # 【可选】文章分类 #

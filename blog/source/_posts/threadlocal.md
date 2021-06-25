@@ -1,17 +1,26 @@
 ---
 title: ThreadLocal
-tags: []
-id: '1408'
-categories:
-  - - java
+updated: 2021-06-25 00:24:14
+description: ThreadLocal
+tags:
+- Java
+# 置顶优先级 数值越大优先级越高 #
+sticky: 9860
+# 【可选】文章分类 #
+categories: Java
+cover: https://i.loli.net/2021/06/25/epQrf8jALvUP1W2.jpg
+top_img: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
+# 【可选】文章关键字 #
+keywords:
+- Java
 date: 2020-04-24 21:40:23
 ---
 
-先上两个BUG
+## 先上两个BUG
 
-BUG\_1:
+### BUG 1:
 
-```
+``` java
 package ThreadLocal;
 
 import java.text.ParseException;
@@ -70,13 +79,16 @@ public class SimpleDateFormatBugTest {
 }
 ```
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/ThreadLocal1-1024x652.png)
+![](https://i.loli.net/2021/06/25/F32fGCuMrYz4iAB.png)
 
+{% note warning no-icon %}
 多线程下使用同一个SimpleDateFormat实例将String日期格式转换成Date只能获取到其中一次的结果，其他两个线程出错
+{% endnote %}
 
-BUG\_2:
 
-```
+### BUG 2:
+
+``` java
 package ThreadLocal;
 
 import java.text.ParseException;
@@ -129,30 +141,36 @@ public class SimpleDateFormat {
 }
 ```
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/ThreadLocal2-1024x536.png)
+![](https://i.loli.net/2021/06/25/gH8ztSNwLJ2qV49.png)
 
+{% note info no-icon %}
 同样在多线程下如果将Date转成String的话，多个线程共享了同一个数据，导致获取的时间为同一个数据
+{% endnote %}
 
-#### 解决方案一：ThreadLocal
+## 如何解决
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/ThreadLocal3-1024x731.png)
+### 解决方案一：ThreadLocal
 
-Result：
+![](https://i.loli.net/2021/06/25/DHjfmtCZ4vwAORP.png)
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/ThreadLocal4-1024x470.png)
+- Result：
 
-#### 原因分析：
+![](https://i.loli.net/2021/06/25/i7NFjDHlAT8SoXw.png)
+### 原因分析：
 
-SimpleDateFormat是线程不安全的，具体可以从parse_(_source, pos_)_方法中得到答案
+SimpleDateFormat是线程不安全的，具体可以从`parse(source, pos)`方法中得到答案
 
-```
+``` java
 parsedDate = calb.establish(calendar).getTime();
 ```
 
+{% note warning no-icon %}
 calendar是成员变量，成员变量在多线程下如果没有锁的限制的话，就很容易出现线程安全问题。
+{% endnote %}
 
+{% note blue 'fas fa-bullhorn' simple %}
 那使用synchronized也可以做到线程安全，但是锁会降低线程的执行效率
+{% endnote %}
+### 解决方案二：synchronized
 
-#### 解决方案二：synchronized
-
-![](https://www.zby123.club/wp-content/uploads/2020/04/ThreadLocal7.png)
+![](https://i.loli.net/2021/06/25/Dgdt7Gc1zjHA9la.png)

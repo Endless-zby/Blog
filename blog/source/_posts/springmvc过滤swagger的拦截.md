@@ -6,6 +6,7 @@ tags:
 - Java
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9902
+cover: https://i.loli.net/2021/06/19/YmBdsb85UrHFVCN.jpg
 # 【可选】文章分类 #
 categories: Java
 # 【可选】文章关键字 #
@@ -21,7 +22,7 @@ date: 2020-04-02 11:09:06
 
 - 重写 addResourceHandlers 方法如下：
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/swagger-1024x297.png)
+![](https://i.loli.net/2021/06/25/b7pnUvk6l8qGCAS.png)
 
 ```java
 @Override

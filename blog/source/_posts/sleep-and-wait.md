@@ -1,15 +1,24 @@
 ---
 title: Sleep and Wait
-tags: []
-id: '1457'
-categories:
-  - - java
+updated: 2021-06-25 00:24:14
+description: Sleep and Wait
+tags:
+- Java
+# 置顶优先级 数值越大优先级越高 #
+sticky: 9870
+# 【可选】文章分类 #
+categories: Java
+cover: https://i.loli.net/2021/06/25/ra7BhmnSKV3LFCw.jpg
+top_img: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
+# 【可选】文章关键字 #
+keywords:
+- Java
 date: 2020-06-10 01:13:10
 ---
 
 ### Wait
 
-```
+``` java
 package 锁wait;
 
 /**
@@ -64,6 +73,6 @@ class waitTest extends Thread {
 }
 ```
 
-![](https://www.zby123.club/wp-content/uploads/2020/06/wait.png)
+![](https://i.loli.net/2021/06/25/CTrxq7Ip8JmsDFh.png)
 
 “wait”的运行结果
