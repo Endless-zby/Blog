@@ -6,6 +6,7 @@ tags:
 - 工具
 # 置顶优先级 数值越大优先级越高 #
 sticky: 9965
+cover: https://i.loli.net/2021/06/25/ZEDdvCexbHV5h7l.png
 # 【可选】文章分类 #
 categories: 工具
 # 【可选】文章关键字 #
@@ -15,11 +16,10 @@ keywords:
 date: 2019-10-15 15:30:14
 ---
 
-
-> [点击进入官网地址](https://www.microsoft.com/zh-cn/software-download/windows10)
+{% btn 'https://www.microsoft.com/zh-cn/software-download/windows10',点击进入官网下载地址,far fa-hand-point-right,orange larger %}
 
 ---
-![](https://www.zby123.club/wp-content/uploads/2019/10/windows1-1024x556.png)
+![](https://i.loli.net/2021/06/25/ZKcTUkMLG7uelWp.png)
 
 - 页面上只有下载工具和更新的按钮
 
@@ -31,13 +31,14 @@ date: 2019-10-15 15:30:14
 
 - 这时刚才的页面会刷新一次， 可以看到这时的页面上出现了iso的下载按钮
 
-![](https://www.zby123.club/wp-content/uploads/2019/10/windows2-1024x556.png)
+![](https://i.loli.net/2021/06/25/fD2cMkiRu9TmBvy.png)
 
 - 选择【Windows10】
 
 - 点击【确认】下载即可
 
-[点击下载最新win10-1903-简体中文x\_64版本ISO](https://software-download.microsoft.com/pr/Win10_1903_V2_Chinese(Simplified)_x64.iso?t=bbadde30-7cee-43e1-9d26-42195d00108a&e=1571274806&h=b3d24674c0e83b7e8277cce9f3dd1cd3)
+{% btn 'https://software-download.microsoft.com/pr/Win10_1903_V2_Chinese(Simplified)_x64.iso?t=bbadde30-7cee-43e1-9d26-42195d00108a&e=1571274806&h=b3d24674c0e83b7e8277cce9f3dd1cd3',点击下载最新win10-1903-简体中文x\_64版本ISO,far fa-hand-point-right,green larger %}
+
 
 > 不用翻墙，国内节点速度还可以
 
