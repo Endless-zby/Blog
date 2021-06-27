@@ -1,46 +1,52 @@
 ---
 title: SpringBoot中拦截器拦截静态资源问题（thymeleaf）
-tags: []
-id: '392'
-categories:
-  - - java
-  - - SpringBoot
+updated: 2021-06-27 00:24:14
+description: SpringBoot中拦截器拦截静态资源问题（thymeleaf）
+tags:
+- Java
+- SpringBoot
+# 置顶优先级 数值越大优先级越高 #
+sticky: 9838
+cover: https://i.loli.net/2021/06/27/YkwCFbGsfSdEi4n.jpg
+top_img: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
+# 【可选】文章分类 #
+categories: SpringBoot
+# 【可选】文章关键字 #
+keywords:
+- Config
+- SpringBoot
 date: 2019-07-11 11:02:57
 ---
 
 > SpringBoot2.0拦截器WebMvcConfigurationSupport
 
-错误如图所示：
+### 错误如图所示
 
-![](https://zby123.club/wp-content/uploads/2019/07/拦截器1-1024x185.png)
+- 控制台信息
+  ![](https://i.loli.net/2021/06/27/OjGx2dTBL1ERgMb.png)
 
-控制台信息
+- 页面测试
+  ![](https://i.loli.net/2021/06/27/tg9VmihzdoHl1r2.png)
 
-![](https://zby123.club/wp-content/uploads/2019/07/拦截器2-1024x211.png)
 
-页面测试
+### 解决方案
 
-解决方案：
+- 添加静态资源处理器来过滤掉静态资源，使静态资源的请求不被拦截器拦截
 
-添加静态资源处理器来过滤掉静态资源，使静态资源的请求不被拦截器拦截
+- 看一下 `WebMvcConfigurationSupport` 中关于静态资源的方法
 
-*   看一下 WebMvcConfigurationSupport 中关于静态资源的方法
+> addResourceHandlers
+![](https://i.loli.net/2021/06/27/oGJHNA7MflXiUrg.png)
 
-![](https://zby123.club/wp-content/uploads/2019/07/拦截器3.png)
+- 重写`WebMvcConfigurationSupport`中的`addResourceHandlers`方法，添加对静态资源目录的过滤
 
-addResourceHandlers
+![](https://i.loli.net/2021/06/27/8bGfQw9j4SCmMXz.png)
+- 当然，还需要正确的目录结构
 
-*   重写WebMvcConfigurationSupport中的addResourceHandlers方法，添加对静态资源目录的过滤
+![](https://i.loli.net/2021/06/27/fI2VMtE5lRgUdxq.png)
+- 拦截器完整代码：
 
-![](https://zby123.club/wp-content/uploads/2019/07/拦截器4.png)
-
-*   当然，还需要正确的目录结构
-
-![](https://zby123.club/wp-content/uploads/2019/07/拦截器5.png)
-
-拦截器完整代码：
-
-```
+```java
 package com.zby.config;
 
 import com.zby.interceptor.JwtInterceptor;
@@ -104,8 +110,5 @@ public class JwtConfiguration extends WebMvcConfigurationSupport {
 }
 ```
 
-测试：
-
-![](https://zby123.club/wp-content/uploads/2019/07/拦截器6.png)
-
-完美解决
+- 验证
+![](https://i.loli.net/2021/06/27/BkJI19fFRaWK3Tu.png)

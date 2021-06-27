@@ -1,30 +1,41 @@
 ---
 title: Spring Cloud之Feign
-tags: []
-id: '402'
-categories:
-  - - java
-  - - SpringBoot
+updated: 2021-06-27 00:24:14
+description: Spring Cloud 之 Feign
+tags:
+- Java
+- SpringCloud
+- Feign
+# 置顶优先级 数值越大优先级越高 #
+sticky: 9837
+cover: https://i.loli.net/2021/06/27/YkwCFbGsfSdEi4n.jpg
+top_img: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
+# 【可选】文章分类 #
+categories: SpringCloud
+# 【可选】文章关键字 #
+keywords:
+- Config
+- SpringCloud
 date: 2019-07-11 13:20:18
 ---
 
 ### Feign的目标
 
-feign是声明式的web service客户端，它让微服务之间的调用变得更简单了，类似controller调用service。Spring Cloud集成了Ribbon和Eureka，可在使用Feign时提供负载均衡的http客户端。
+> feign是声明式的web service客户端，它让微服务之间的调用变得更简单了，类似controller调用service。Spring Cloud集成了Ribbon和Eureka，可在使用Feign时提供负载均衡的http客户端。
 
 ### Feign原理简述
 
-*   启动时，程序会进行包扫描，扫描所有包下所有@FeignClient注解的类，并将这些类注入到spring的IOC容器中。当定义的Feign中的接口被调用时，通过JDK的动态代理来生成RequestTemplate
-*   RequestTemplate中包含请求的所有信息，如请求参数，请求URL等。
-*   RequestTemplate声场Request，然后将Request交给client处理，这个client默认是JDK的HTTPUrlConnection，也可以是OKhttp、Apache的HTTPClient等。
-*   最后client封装成LoadBaLanceClient，结合ribbon负载均衡地发起调用。
+- 启动时，程序会进行包扫描，扫描所有包下所有@FeignClient注解的类，并将这些类注入到spring的IOC容器中。当定义的Feign中的接口被调用时，通过JDK的动态代理来生成RequestTemplate
+- RequestTemplate中包含请求的所有信息，如请求参数，请求URL等。
+- RequestTemplate声场Request，然后将Request交给client处理，这个client默认是JDK的HTTPUrlConnection，也可以是OKhttp、Apache的HTTPClient等。
+- 最后client封装成LoadBaLanceClient，结合ribbon负载均衡地发起调用。
 
 ### 引入Feign
 
-使用Maven来管理相关jar
+- 使用Maven来管理相关jar
 
-```
-<dependency>
+```xml
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
@@ -34,18 +45,18 @@ feign是声明式的web service客户端，它让微服务之间的调用变得�
         </dependency>
 ```
 
-当然，前提是已经有了注册中心Eureka（贴上 Eureka ）
+- 当然，前提是已经有了注册中心Eureka（贴上 Eureka ）
 
-```
-<dependency>
+```xml
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId> spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 ```
 
-armstype 的yml：
+- `armstype` 的yml：
 
-```
+```yaml
 server:
   port: 9000
 
@@ -62,10 +73,10 @@ spring:
 
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://cdb-6kot9g5e.cd.tencentcdb.com:10007/arms?characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://---------:10007/arms?characterEncoding=utf-8&useSSL=true
 #    url: jdbc:mysql://localhost:3306/arms?characterEncoding=utf-8
-    username: root
-    password: zby123456
+    username: ------
+    password: ------
 
   thymeleaf:
     cache: false
@@ -92,9 +103,9 @@ spring:
 #    expire: 120000       #过期时间
 ```
 
-userinfo 的yml：
+- `userinfo` 的yml：
 
-```
+```yaml
 server:
   port: 9001
 
@@ -111,10 +122,10 @@ spring:
 
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://cdb-6kot9g5e.cd.tencentcdb.com:10007/arms?characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://---------:10007/arms?characterEncoding=utf-8&useSSL=true
 #    url: jdbc:mysql://localhost:3306/arms?characterEncoding=utf-8
-    username: root
-    password: zby123456
+    username: ------
+    password: ------
 
   thymeleaf:
     cache: false
@@ -143,20 +154,22 @@ jwt:
 
 ```
 
-实例目的： 在userinfo的微服务中调取armstype中的test()方法
+> 实例目的： 在userinfo的微服务中调取armstype中的test()方法
 
-上面我们已经引入了相关依赖，这里我们声明哪些服务作为Eureka的客户端存在、有哪些服务可以在Eureka中可以被发现，两个注解搞定
+> 上面我们已经引入了相关依赖，这里我们声明哪些服务作为`Eureka`的客户端存在、有哪些服务可以在Eureka中可以被发现，两个注解搞定
 
-@EnableDiscoveryClient（开启“在注册中心发现其他微服务”的功能）
-@EnableFeignClients（注册本服务为客户端）
-
-![](https://zby123.club/wp-content/uploads/2019/07/Feign1-1024x491.png)
-
-发现服务和被发现服务都开启这两个注释
-
-armstype中被调用的方法：
-
+```java
+@EnableDiscoveryClient //（开启“在注册中心发现其他微服务”的功能）
+@EnableFeignClients //（注册本服务为客户端）
 ```
+
+
+![](https://i.loli.net/2021/06/27/JCSgiOvLt6pEIGw.png)
+- 发现服务和被发现服务都开启这两个注释
+
+- armstype中被调用的方法：
+
+```java
     @ResponseBody
     @GetMapping("test")
     public String test(){
@@ -164,9 +177,9 @@ armstype中被调用的方法：
     }
 ```
 
-在userinfo服务中创建接口文件里链接到 armstype 服务
+- 在userinfo服务中创建接口文件里链接到 armstype 服务
 
-```
+```java
 package com.zby.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
@@ -193,9 +206,9 @@ public interface client {
 }
 ```
 
-Controller：
+- Controller：
 
-```
+```java
 package com.zby.controller;
 
 import com.zby.client.client;
@@ -233,6 +246,5 @@ public class UserController {
 }
 ```
 
-![](https://zby123.club/wp-content/uploads/2019/07/Feign2.png)
-
-可以看到访问地址中的端口是 userinfo 服务的端口，但是依然通过Feign来执行了 armstype 中的test()方法
+![](https://i.loli.net/2021/06/27/8nqhjwCQcDLk4yz.png)
+> 可以看到访问地址中的端口是 `userinfo` 服务的端口，但是依然通过Feign来执行了 `armstype` 中的`test()`方法

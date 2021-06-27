@@ -1,31 +1,41 @@
 ---
-title: Springboot +Swagger初级应用
-tags: []
-id: '564'
-categories:
-  - - java
-  - - SpringBoot
+title: Springboot + Swagger初级应用
+updated: 2021-06-27 00:24:14
+description: Swagger使用
+tags:
+- Java
+- SpringBoot
+- Swagger
+# 置顶优先级 数值越大优先级越高 #
+sticky: 9815
+cover: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
+top_img: https://i.loli.net/2021/06/25/fFpQi2wJKyVLduS.jpg
+# 【可选】文章分类 #
+categories: SpringBoot
+# 【可选】文章关键字 #
+keywords:
+- Swagger
 date: 2019-07-29 18:24:27
 ---
 
 > The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.  
 > An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
 
-先上干货，具体问题在后面说
+### 介绍
+> Swagger首先当然是作为一款强大的API文档工具所存在的，其次在在接口测试方面对开发人员提供了非常大的便利，所以， 
+> Swagger是一款RESTFUL接口的文档在线自动生成+功能测试功能软件。Swagger是一个规范和完整的框架，用于生成、描述、调用和`可视化RESTFU`风格的web服务。
+> 目标是使客户端和文件系统作为服务器一同样的速度来更新文件的方法，参数和模型紧密集成到服务器。
+> 这个解释简单点来讲就是说，swagger是一款可以根据restful风格生成的接口`开发文档`，并且支持做`测试`的一款中间软件。
 
-在这之前当然还是要先介绍一下Swagger，要不然云里雾里的。
+- 对于后端开发来说，不用手写接口拼大量的参数，防止出错，全注解方式，开发简单方便
+- 对于测试来说，不需要前端UI功能就可以对接口直接测试，放弃了使用已久的postman
+- 对于前端来说，后端只需定义好接口，会自动生成文档，接口功能、参数一目了然
 
-Swagger首先当然是作为一款强大的API文档工具所存在的，其次在在接口测试方面对开发人员提供了非常大的便利，所以， Swagger是一款RESTFUL接口的文档在线自动生成+功能测试功能软件。Swagger是一个规范和完整的框架，用于生成、描述、调用和可视化RESTfu风格的web服务。目标是使客户端和文件系统作为服务器一同样的速度来更新文件的方法，参数和模型紧密集成到服务器。这个解释简单点来讲就是说，swagger是一款可以根据restful风格生成的接口开发文档，并且支持做测试的一款中间软件。
+### 整合 Swagger
 
-*   对于后端开发来说，不用手写接口拼大量的参数，防止出错，全注解方式，开发简单方便
-*   对于测试来说，不需要前端UI功能就可以对接口直接测试，放弃了使用已久的postman
-*   对于前端来说，后端只需定义好接口，会自动生成文档，接口功能、参数一目了然
+- 老规矩，引入依赖
 
-整合 Swagger
-
-*   老规矩，引入依赖
-
-```
+```xml
     <dependency><!--添加Swagger依赖 -->
         <groupId>io.springfox</groupId>
         <artifactId>springfox-swagger2</artifactId>
@@ -38,9 +48,9 @@ Swagger首先当然是作为一款强大的API文档工具所存在的，其次�
     </dependency>
 ```
 
-*   添加 Swagger 配置文件
+- 添加 Swagger 配置文件
 
-```
+```java
 package com.zby.config;
 
 import org.springframework.context.annotation.Bean;
@@ -96,9 +106,9 @@ public class Swagger2Config {
 }
 ```
 
-*   添加@EnableSwagger2注解开启 Swagger
+- `@EnableSwagger2`注解开启 Swagger
 
-```
+```java
 package com.zby;
 
 import com.zby.util.IdWorker;
@@ -133,9 +143,9 @@ public class UserinfoApplication extends WebMvcConfigurationSupport {
 }
 ```
 
-*   最后，对接口进行api文档注解，不进行注解也会由相关的api，但是没有接口的详细描述，只有开发人员可以看懂。 （为了看清整个类的结构，这里贴出全部代码，下面我们只对apiTest方法进行详细解释）
+- 最后，对接口进行api文档注解，不进行注解也会由相关的api，但是没有接口的详细描述，只有开发人员可以看懂。 （为了看清整个类的结构，这里贴出全部代码，下面我们只对apiTest方法进行详细解释）
 
-```
+```java
 package com.zby.controller;
 
 import com.zby.client.client;
@@ -294,9 +304,9 @@ public class UserController {
 }
 ```
 
-OK!到这里准备工作已经结束了，我们先来具体看一下apiTest方法
+- OK!到这里准备工作已经结束了，我们先来具体看一下apiTest方法
 
-```
+```java
 @ResponseBody
     @ApiOperation(value="查询用户数据", notes="根据用户username查询用户数据")
     @GetMapping("apiTest")
@@ -316,81 +326,70 @@ OK!到这里准备工作已经结束了，我们先来具体看一下apiTest方�
     }
 ```
 
-![](https://zby123.club/wp-content/uploads/2019/07/Swagger1-1024x472.png)
+![](https://i.loli.net/2021/06/27/PYdEG8N1pfi5One.png)
 
-**注意：**  
-****在后台采用对象接收参数时，Swagger自带的工具采用的是JSON传参，    测试时需要在参数上加入@RequestBody,正常运行采用form或URL提交时候请删除。****
+### 注解解释
 
-注解结束：
-
-*   @Api：用在类上，说明该类的作用。例如：
+- `@Api`：用在类上，说明该类的作用。例如：
+  @Api(value = "api测试接口")
     
-    @Api(value = "api测试接口")
-    
-*   @ApiOperation：注解来给API增加方法说明。例如：
-    
-    @ApiOperation(value="查询用户数据", notes="根据用户username查询用户数据")
+- `@ApiOperation`：注解来给API增加方法说明。例如：
+  @ApiOperation(value="查询用户数据", notes="根据用户username查询用户数据")
     
 
-*   @ApiImplicitParams : 用在方法上包含一组参数说明。
-*   @ApiImplicitParam：用来注解来给方法入参增加说明。
-*   @ApiResponses：用于表示一组响应
-*   @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息
+- `@ApiImplicitParams`: 用在方法上包含一组参数说明。
+- `@ApiImplicitParam`：用来注解来给方法入参增加说明。
+- `@ApiResponses`：用于表示一组响应
+- `@ApiResponse`：用在@ApiResponses中，一般用于表达一个错误的响应信息
     
-        l   **code**：数字，例如400
+    **code**：数字，例如400
     
-        l   **message**：信息，例如"请求参数没填好"
+    **message**：信息，例如"请求参数没填好"
     
-        l   **response**：抛出异常的类   
+    **response**：抛出异常的类   
     
-*   @ApiModel：描述一个Model的信息（一般用在请求参数无法使用@ApiImplicitParam注解进行描述的时候）
-    
-        l   **@ApiModelProperty**：描述一个model的属性
+- `@ApiModel`：描述一个Model的信息（一般用在请求参数无法使用@ApiImplicitParam注解进行描述的时候）
+  
+    **@ApiModelProperty**：描述一个model的属性
     
 
-注意：@ApiImplicitParam的参数说明：
+> 注意：`@ApiImplicitParam`的参数说明：
 
 **paramType**：指定参数放在哪个地方
 
-header：请求参数放置于Request Header，使用@RequestHeader获取  
-query：请求参数放置于请求地址，使用@RequestParam获取  
-path：（用于restful接口）-->请求参数的获取：@PathVariable  
-body：（不常用）  
-form（不常用）
-
-name：参数名
-
-dataType：参数类型
-
-required：参数是否必须传
-
-value：说明参数的意思
-
-defaultValue：参数的默认值
+`header`：请求参数放置于Request Header，使用@RequestHeader获取  
+`query`：请求参数放置于请求地址，使用@RequestParam获取  
+`path`：（用于restful接口）-->请求参数的获取：@PathVariable  
+`body`：（不常用）  
+`form`（不常用）
+`name`：参数名
+`dataType`：参数类型
+`required`：参数是否必须传
+`value`：说明参数的意思
+`defaultValue`：参数的默认值
 
 折腾这么久，启动！
 
 直接访问 [http://localhost:9001/swagger-ui.html](http://localhost:9001/swagger-ui.html) 即可！
 
-![](https://zby123.club/wp-content/uploads/2019/07/Swagger2-1024x534.png)
+![](https://i.loli.net/2021/06/27/CPRMExnlmgDcUTV.png)
+> 额。。。。404!
 
-额。。。。纳尼！404
+### 问题分析
 
-分析：让我们回想一下这个问题会是什么原因引起的！从控制台中我们可以看到一些端倪
+> 分析：让我们回想一下这个问题会是什么原因引起的！从控制台中我们可以看到一些端倪
 
-![](https://zby123.club/wp-content/uploads/2019/07/image-1.png)
+![](https://i.loli.net/2021/06/27/OJl9sIcHYGpX2y1.png)
+> 没有`/sagger-ui.html`的映射
 
-没有`/sagger-ui.html`的映射
+那我们肯定第一时间会想到是`WebMvcConfigurationSupport`的原因
 
-那我们肯定第一时间会想到是WebMvcConfigurationSupport的原因
+![](https://i.loli.net/2021/06/27/QNTjwo6tILl8ydX.png)
+> 那。。。。那就直接注释掉@Configuration，虽然这可以解决问题，但是会直接影响到我拦截器的工作，突然想到以前我记录过关于“SpringBoot中拦截器拦截静态资源问题（thymeleaf）”这篇文章，这问题不是如出一辙么！（可见笔记的重要性）
 
-![](https://zby123.club/wp-content/uploads/2019/07/Swagger4-1024x313.png)
+### 解决问题
 
-那。。。。那就直接注释掉@Configuration，虽然这可以解决问题，但是会直接影响到我拦截器的工作，突然想到以前我记录过关于“SpringBoot中拦截器拦截静态资源问题（thymeleaf）”这篇文章，这问题不是如出一辙么！（可见笔记的重要性）
-
-解决问题：
-
-```
+```java
 package com.zby.config;
 
 import com.zby.interceptor.JwtInterceptor;
@@ -439,36 +438,30 @@ public class JwtConfiguration extends WebMvcConfigurationSupport {
 }
 ```
 
-![](https://zby123.club/wp-content/uploads/2019/07/Swagger3-1024x639.png)
-
+![](https://i.loli.net/2021/06/27/QOx47TwlMFog2uB.png)
 OK!再次启动，直接访问 [http://localhost:9001/swagger-ui.html](http://localhost:9001/swagger-ui.html)
 
-终于看到久违的界面
+### 结论
+> spring boot是简化了spring的一些配置，并且帮开发者管理jar包版本，自动生成bean，方便开发者。但是这也带来了一些恶果，强大的封装造成有些问题不好排查，想做一些改动引起很大的问题。
 
-结论： spring boot是简化了spring的一些配置，并且帮开发者管理jar包版本，自动生成bean，方便开发者。但是这也带来了一些恶果，强大的封装造成有些问题不好排查，想做一些改动引起很大的问题。
-
-![](https://zby123.club/wp-content/uploads/2019/07/Swagger5-1024x555.png)
-
+![](https://i.loli.net/2021/06/27/xgCZhzWvbIaEAQw.png)
 可以看到controller中所有的接口方法
 
 打开第一个apiTest
 
-![](https://zby123.club/wp-content/uploads/2019/07/Swagger6-1024x727.png)
-
+![](https://i.loli.net/2021/06/27/tFcLvXemRhy7DYr.png)
 是不是postman的既视感
 
-测试一下，用数据说话
+测试一下
 
-![](https://zby123.club/wp-content/uploads/2019/07/Swagger7-1024x807.png)
-
+![](https://i.loli.net/2021/06/27/8YETNDt3qzRpJOs.png)
 ok
 
 注意： 现在很多请求需要在header增加额外参数，可以参考如下做法， 使用request接收
 
 ```
 @ApiImplicitParam(paramType="header", name = "token", value = "token", required = true, dataType = "String")
-
+```
+```
 String token = request.getHeader("token");
 ```
-
-就先到这吧！
