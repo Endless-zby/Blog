@@ -1,7 +1,7 @@
 ---
 title: 搭建自己的ssr
 date: 2019-10-12 12:05:16
-updated: 2021-05-16 01:50:56
+updated: 2021-07-19 21:30:21
 top_img: https://i.loli.net/2021/06/19/EBn5ciPYWOzIaNq.jpg
 cover: https://i.loli.net/2021/06/19/By7GVLIvDwfepKb.jpg
 description: 相比市场上较高投入的虚拟专用网络，只是单纯的用于工作的话，不妨自己试着搭建一套ssr
@@ -181,3 +181,68 @@ yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.
 应对平时一般的资料查找或者。。。。足够了，也可以添加多个端口和密码，供多个设备使用
 
 如果还有疑问也可以联系本人 381016296@qq.com
+
+
+
+---
+
+# 2021-07-19更新（最新的看这个）
+
+## 一键安装ssr
+> 不罗嗦了，复制粘贴，设置密码，其他的默认就行
+```shell
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
+chmod +x shadowsocksR.sh
+./shadowsocksR.sh 2>&1 | tee shadowsocksR.log
+```
+
+## ssr 命令
+> 常用命令 启动/停止/重启/状态
+```shell
+/etc/init.d/shadowsocks start / stop / restart / status
+```
+> 配置文件路径            
+```shell
+/etc/shadowsocks.json
+```
+> 日志文件路径
+```shell
+/var/log/shadowsocks.log
+```
+> 代码安装目录
+```shell
+/usr/local/shadowsocks
+```
+
+##配置多账户
+
+> 修改shadowsocks的配置文件shadowsocks.json，将password字段改为port_password并添加端口号和密码的KV值,重启shadowsocks即可
+> 例如：
+```yaml
+{
+    "server":"0.0.0.0",
+    "server_ipv6":"[::]",
+    "server_port":17015,
+    "local_address":"127.0.0.1",
+    "local_port":1080,
+    "port_password":{
+        "11111":"password1",
+        "22222":"password2",
+        "33333":"password3"
+    },
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "protocol":"origin",
+    "protocol_param":"",
+    "obfs":"plain",
+    "obfs_param":"",
+    "redirect":"",
+    "dns_ipv6":false,
+    "fast_open":false,
+    "workers":1
+}
+```
+{% note orange 'fas fa-battery-half' modern %}
+记得在`策略组`中开放相应的几个端口
+{% endnote %}
+
