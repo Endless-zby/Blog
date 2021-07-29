@@ -29,7 +29,8 @@ keywords:
 
 # 准备Jenkins环境
 ### 下载
-下载地址：https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat/
+下载地址
+{% btn 'https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat/',Jenkins下载地址,far fa-hand-point-right,orange larger %}
 
 ### 安装
 
