@@ -181,7 +181,7 @@ public class ListenerExcel extends AnalysisEventListener<Student> {
 }
 ```
 #### 重点
-> 争对我们每个要解析的Excel文件都应实现一个监听器，实际就是简化版的解析器，其中我们只需要实现`invoke()`和`doAfterAllAnalysed()`两个方法，`invoke`是Excel文件中每解析一行都需要执行的操作，如果用在我们实际的业务中，一般会放入集合中等待入表或做算法操作，`doAfterAllAnalysed`将在整个sheet解析完成后执行。
+> 针对我们每个要解析的Excel文件都应实现一个监听器，实际就是简化版的解析器，其中我们只需要实现`invoke()`和`doAfterAllAnalysed()`两个方法，`invoke`是Excel文件中每解析一行都需要执行的操作，如果用在我们实际的业务中，一般会放入集合中等待入表或做算法操作，`doAfterAllAnalysed`将在整个sheet解析完成后执行。
 
 > 注意：如果是Spring的项目中使用，Excel的监听器不能被Spring所管理， 要每次读取excel都要new，里面用到spring的话可以构造方法传进去 （比如我上面的StudentDao，持久层）
 
