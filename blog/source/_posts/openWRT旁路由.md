@@ -18,6 +18,9 @@ keywords:
 - openwrt
 ---
 
+
+![openwrt旁路由网络拓扑示意图.png](https://s2.loli.net/2022/02/15/HygRpx87okWzaSP.png)
+
 ## 安装openwrt
 - 找到网卡
 ```shell
