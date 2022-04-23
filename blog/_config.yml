@@ -105,3 +105,7 @@ deploy:
     type: git
     repo: https://github.com/Endless-zby/Endless-zby.github.io.git
     branch: main
+aplayer:
+  meting: true
+  asset_inject: false
+
