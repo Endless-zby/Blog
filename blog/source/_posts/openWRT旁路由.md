@@ -11,7 +11,7 @@ tags:
 # 置顶优先级 数值越大优先级越高 #
 sticky: 100011
 # 【可选】文章分类 #
-categories: Linux
+categories: 工具
 # 【可选】文章关键字 #
 keywords:
 - Linux
