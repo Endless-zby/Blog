@@ -46,7 +46,11 @@ virking/openwrt:onecloud| openwrt镜像 |  此镜像中包含ShadowSocksR Plus+�
 
 - Armbian镜像`账号`:root  `密码`: 1234
 - openwrt镜像`账号`:root  `密码`: password
-
+- Armbian写入EMMC
+```shell
+cd /boot/install
+./install.sh
+```
 
 ## 实例
 
