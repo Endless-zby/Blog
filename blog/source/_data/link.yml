@@ -3,15 +3,15 @@
   link_list:
     - name: IDEA 激活码下载
       link: http://idea.medeming.com/idea/
-      avatar: https://i.loli.net/2021/05/22/weMo9QgpuvWLfHy.png
+      avatar: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/202267-05dvgtytqoidea.jpg
       descr: IDEA激活码
     - name: free-V2ray
       link: https://github.com/loouo/free
-      avatar: https://i.loli.net/2021/05/22/cJktT2mNHnCBMLV.jpg
+      avatar: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/202267-mi0l9xgtojv2ray.jpg
       descr: 免费的V2ray
     - name: tool
       link: https://tool.lu/
-      avatar: https://i.loli.net/2021/05/22/Mk9xUWXAuS8cNrE.jpg
+      avatar: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/202267-k1dp2w11uutoolsss.jpg
       descr: 程序员的工具箱
     - name: butterfly.js
       link: https://butterfly.js.org/
@@ -19,11 +19,11 @@
       descr: butterfly主题介绍
     - name: fontawesome
       link: https://fontawesome.com/icons?from=io
-      avatar: https://i.loli.net/2021/06/19/wqvizxL5mI6gHQn.jpg
+      avatar: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/202267-d30lsnbctmu%3D1566729243%2C2352067513%26fm%3D26%26gp%3D0.jpg
       descr: icon库
     - name: pixabay
       link: https://pixabay.com/zh/photos/
-      avatar: https://i.loli.net/2021/06/19/VoEH58z3epL9O4D.jpg
+      avatar: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/202267-qe0qwzwto4smartphone-vector-5333731_640.jpg
       descr: 高清图片素材库
 - class_name: 效率
   class_desc: 解放双手
