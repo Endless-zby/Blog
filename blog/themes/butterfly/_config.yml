@@ -158,7 +158,7 @@ post_meta:
     date_type: created # created or updated or both 主页文章日期是创建日或者更新日或都显示
     date_format: date # date/relative 显示日期还是相对日期
     categories: true # true or false 主页是否显示分类
-    tags: false # true or false 主页是否显示标籤
+    tags: true # true or false 主页是否显示标籤
     label: true # true or false 显示描述性文字
   post:
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
@@ -194,7 +194,7 @@ toc:
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
