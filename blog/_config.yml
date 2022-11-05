@@ -11,6 +11,12 @@ author: byzhao
 language: zh-CN
 timezone: ''
 
+
+sitemap:
+  path: sitemap.xml  # 索引地图路径
+  tag: false   # 标签页不添加到网站地图中
+  category: false   # 分类页不添加到网站地图中
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://endless-zby.github.io/
