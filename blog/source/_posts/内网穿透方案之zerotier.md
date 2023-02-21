@@ -27,15 +27,14 @@ keywords:
 > 大概说下我自己的网络状态，北京移动，有动态ipv6，每月4日，14日，24日ip地址会发生变化，平时基本不会变，设备有：  
 
 - nas：做数据存储照片和jellyfin看电影  
-- nuc：一台巴掌大的nuc，N4100 + 8G + 256G，跑着一堆开发工具，还有ddns对ipv6地址做域名解析  
+- nuc：一台巴掌大的nuc当服务器用，N4100 + 8G + 256G，跑着一堆开发工具，还有ddns对ipv6地址做域名解析  
 - 红米AC2100：已经被我刷了padavan老毛子的固件，做软路由  
-- 玩客云：做下载器  
+- 玩客云：刷了电视盒子
 
-每个应用通过ddns和nginx的配置都有自己的域名，看似很美好，但这一切都依赖于ipv6，`BUT`公司网络不支持ipv6，这就直接导致我在公司与家里的设备彻底失去了联系，
-
+每个应用通过ddns和nginx的配置都有自己的域名，看似很美好，但这一切都依赖于ipv6，`BUT`公司网络不支持ipv6，这就直接导致我在公司时与家里的设备彻底失去了联系，但是zerotier可以将我分布在不同地域的不同客户端组成一个局域网，在局域网将不受限的互相访问，简单的场景就是在公司打开nas下载一部电影等着我下班回去边吃边放松
 
 ## 了解zerotier
-
+- 
 - 
 - 
 
@@ -53,3 +52,5 @@ keywords:
 ![zerotier插件介绍](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023214-153805-ocddjmu461zerotier5.jpg)
 
 ![zerotier插件使用界面](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023214-153805-7wc10h2w7xzerotier6.jpg)
+
+插件将有计划的持续升级，如果有更好的想法欢迎在评论区留言
