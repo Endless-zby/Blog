@@ -77,6 +77,15 @@ wget -qO- https://get.casaos.io | sudo bash
 - 极高的扩展能力
 ![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023318-rk1ak1h5iq1679071289082.png)
 
+### 注意
+> 如果安装的应用打不开，请在镜像设置中打开`特权`，通过启动日志可以看到大多问题都是没有文件读写权限造成的  
+
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023318-atox2a2bqg1679076753774.png)
+
+- 示例：Transmission
+![Transmission](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023318-ny1ghgslzc1679076565939.png)
+
+可以看到Transmission下载速度非常快，基本可以跑满带宽，作为轻量级的nas简直完美
 ### 共享资源
 在局域网内共享CasaOS上挂载的硬盘
 ![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023318-jsjrvm9wea1679071679106.png)
