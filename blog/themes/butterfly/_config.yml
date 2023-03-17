@@ -52,6 +52,7 @@ social:
    fab fa-github: https://github.com/Endless-zby || Github
    fas fa-envelope: mailto:zhaoboya123@gmail.com || Email
    fas fa-address-card: https:www.zby123.club || Myself
+   fa-solid fa-paper-plane: https://xn--4gq62f52gdss.com/#/register?code=wfKkYZwq || 一元机场
 # search (搜索)
 # --------------------------------------
 
@@ -662,7 +663,7 @@ aside:
       link: https://github.com/Endless-zby
   card_announcement:
     enable: true
-    content: "qbittorrent最新tracker更新地址：https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt"
+    content: "一元机场：https://xn--4gq62f52gdss.com/#/register?code=wfKkYZwq"
   card_recent_post:
     enable: true
     limit: 10 # if set 0 will show all
