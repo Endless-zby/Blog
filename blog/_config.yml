@@ -115,3 +115,5 @@ aplayer:
   meting: true
   asset_inject: false
 
+baidusitemap:
+  path: baidusitemap.xml
