@@ -115,5 +115,13 @@ aplayer:
   meting: true
   asset_inject: false
 
+# 1、安装  npm install hexo-generator-baidu-sitemap --save
+#
+# 2、网站_config.yml增加 baidusitemap 属性
+#    baidusitemap:
+#       path: baidusitemap.xml
+# 3、hexo g
+#
+# 4、hexo d
 baidusitemap:
-  path: baidusitemap.xml
+  path: post-sitemap.xml

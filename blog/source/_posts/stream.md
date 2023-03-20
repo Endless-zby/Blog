@@ -264,8 +264,8 @@ public class Stream入门 {
 
 main函数中的代码充分体现了函数式编程的代码简洁性
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/stream-1024x410.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-150632-cnqmz2gj7vstream.png)
 
 result：
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/stream1.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-150639-54jh4hxelrstream1.png)

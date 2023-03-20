@@ -76,7 +76,7 @@ public class spider implements PageProcessor {
 }
 ```
 
-![](https://zby123.club/wp-content/uploads/2019/07/webmagic-1024x174.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-151135-qfi7zqsh5qwebmagic.png)
 
 ```java
 public Site getSite() {

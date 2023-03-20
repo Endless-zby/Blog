@@ -97,8 +97,8 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Spring Boot中使用Swagger2构建RESTful APIs")
-                .description("更多请关注https://www.zby123.club")
-                .termsOfServiceUrl("https://www.zby123.club")
+                .description("更多请关注https://www.byzhao.cn")
+                .termsOfServiceUrl("https://www.byzhao.cn")
                 .version("1.0")
                 .build();
     }

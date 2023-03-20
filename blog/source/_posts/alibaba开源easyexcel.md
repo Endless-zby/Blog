@@ -37,7 +37,7 @@ keywords:
 
 我们以使用最多的 `Apache poi` 来做为对比
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel-1024x600.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144511-il8t7t698seasyExcel.png)
 
 - 这是我项目中使用到的 poi 做Excel的解析，就这一堆看着难受不难受
 
@@ -64,13 +64,13 @@ keywords:
 
 *   示例Excel
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel1.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144541-zvc81k0a6keasyExcel1.png)
 
 - 以下Demo都以这个Excel为例子
 
 *   创建实体类 （代码）
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel2-1024x586.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144559-n9f2bm9qoteasyExcel2.png)
 
 图中的converter属性，后面再介绍
 
@@ -187,7 +187,7 @@ public class ListenerExcel extends AnalysisEventListener<Student> {
 
 *   结束
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel3.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144621-rr794fwcfheasyExcel3.png)
 
 测试
 
@@ -213,13 +213,13 @@ class LombookApplicationTests {
 
 *   Result
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel4-1024x284.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144641-zpbsbvg0tbeasyExcel4.png)
 
 *   QA
 
 1、 `@ExcelProperty`注解是用来指定每个字段的**列名称**，以及Excel中的**下标位置**
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel5-1024x576.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144653-qmr9my8tpneasyExcel5.png)
 
 这个地方我们只需要统一使用value或者index来指定excel中所对用的列即可，官方文档中不推荐同时使用value和index
 
@@ -229,13 +229,13 @@ class LombookApplicationTests {
 
 4、 `@ExcelProperty` 中的converter属性表示类型转换器（Excel转对象的数据处理，和对象集合转Excel的数据处理），根据Converter接口找到一些已经提供的的转换器
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel7-1024x576.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144707-khk389dqa6easyExcel7.png)
 
 当然我们可以重写这个接口实现，使用 converter 绑定到属性上
 
 例如：
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel8-1024x590.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144719-628l472d7eeasyExcel8.png)
 
 重写`convertToJavaData`和`convertToExcelData`方法
 
@@ -267,7 +267,7 @@ public class CustomStringStringConverter implements Converter<String> {
 
 在解析Excel文件的时候自动对对应的属性值进行转换
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel9-1024x545.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144805-bi1o2p6bsneasyExcel9.png)
 
 同样，在生成Excel时也可以通过 `convertToExcelData` 方法自动转换数据
 
@@ -275,7 +275,7 @@ public class CustomStringStringConverter implements Converter<String> {
 
 *   先写一个生成测试的模板数据类
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel10-1024x540.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144813-x8l7m0mniieasyExcel10.png)
 
 代码如下：
 
@@ -308,7 +308,7 @@ public class DataTemplateImpl implements DataTemplate {
 
 *   生成Excel
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel11-1024x486.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144821-rdbs6nisdbeasyExcel11.png)
 
 ```java
 @SpringBootTest
@@ -331,39 +331,39 @@ public class WriteTest {
 
 2、`excelType`可指定类型，使用`ExcelTypeEnum`的枚举类
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel12.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144828-ehsirvolfzeasyExcel12.png)
 
 *   生成Excel（自定义列）
 
 1、使用`excludeColumnFiledNames`或者`excludeColumnIndexes`会根据列名或者列编码来屏蔽该列
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel13-1024x506.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144842-t45j3sb10reasyExcel13.png)
 
 2、使用注解`@ExcelIgnore`同样可以忽略列
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel14-1024x455.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144849-aaw5s3cj0keasyExcel14.png)
 
 体重 属性使用 `@ExcelIgnore` 忽略  
 年龄 属性使用方法 `excludeColumnFiledNames` 忽略
 
 *   复杂头写入
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel16-1024x482.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144912-sloaylkx5measyExcel16.png)
 
 #### web中的读和写（Swagger）
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel19-1024x362.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144946-h1oubgdk2measyExcel19.png)
 
 *   读
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel17-1024x227.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144920-l3sf1if6ydeasyExcel17.png)
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel20-1024x598.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144959-4q5xfd2qqdeasyExcel20.png)
 
 *   写
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel18-1024x552.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-144937-olvhei1j8ieasyExcel18.png)
 
-![](https://www.zby123.club/wp-content/uploads/2020/04/easyExcel21-1024x574.png)
+![](https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2023320-145006-2ovi903inaeasyExcel21.png)
 
 下载模板
