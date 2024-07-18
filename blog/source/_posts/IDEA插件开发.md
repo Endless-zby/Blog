@@ -23,4 +23,7 @@ keywords:
 - Gradle
 ---
 
-> 
+
+> GitHub地址：https://github.com/Endless-zby/intellij-idea-plugin
+
+{% btn 'https://github.com/Endless-zby/intellij-idea-plugin', GitHub项目地址, far fa-hand-point-right,orange larger %}
