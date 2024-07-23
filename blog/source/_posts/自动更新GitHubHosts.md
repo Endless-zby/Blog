@@ -3,8 +3,8 @@ layout: posts
 title: 自动更新GitHubHosts
 date: 2024-07-23 14:55:08
 updated: 2024-07-23 14:55:08
-top_img: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2024718-gyuym6xtbaIcon1.png
-cover: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2024718-gyuym6xtbaIcon1.png
+top_img: https://i.loli.net/2021/06/19/H8CJOieu5nhE7mZ.jpg
+cover: https://i.loli.net/2021/06/19/OgjM2SmRXipBwlC.jpg
 description: 定时更新hosts，解决无法访问GitHub问题
 tags:
 - Linux
