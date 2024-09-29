@@ -1,5 +1,5 @@
 - class_name: 机场
-  class_desc: 这个肮脏的世界
+  class_desc: 中华人民共和国万岁
   link_list:
     - name: 一元机场✈️
       link: https://一元机场.com/#/register?code=wfKkYZwq
@@ -52,3 +52,15 @@
       link: https://tongji.baidu.com/
       avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
       descr: 百度统计平台
+
+- class_name: 学习
+  class_desc: 逆水行舟
+  link_list:
+    - name: Go Fyne 中文文档
+      link: https://www.poloxue.com/
+      avatar: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2024929-fix65tkfojlogo.png
+      descr: Go Fyne 中文文档
+    - name: Go Fyne 官网
+      link: https://fyne.io/
+      avatar: https://byzhao-blog-1257201044.cos.ap-beijing.myqcloud.com/blog/2024929-fix65tkfojlogo.png
+      descr: Go Fyne 官网
